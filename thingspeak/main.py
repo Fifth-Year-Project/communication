@@ -24,6 +24,7 @@ try:
     parse_data = temperature_data.split(",-")[0]
     parse_data = parse_data.replace("'", '"')
     parse_data = parse_data.replace(" ", '')
+    parse_data = parse_data[0:-1]
     parse_data = "[" + parse_data + "]"
 
     json_temp = json.loads(parse_data)
